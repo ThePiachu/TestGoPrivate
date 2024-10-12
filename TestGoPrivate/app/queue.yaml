@@ -1,5 +1,0 @@
-total_storage_limit: 100M
-queue:
-- name: backend
-  target: backend
-  rate: 1/s
