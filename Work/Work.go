@@ -2,8 +2,9 @@ package Work
 
 import (
 	"github.com/ThePiachu/Go/Log"
+	"golang.org/x/net/context"
 )
 
-func WorkWork(c context.Context) {
+func Work(c context.Context) {
 	Log.Infof(c, "Work!")
 }
