@@ -6,6 +6,7 @@ import (
 	"net/http"
 
 	"github.com/ThePiachu/TestGoPrivate/Work"
+	"github.com/ThePiachu/Go/Log"
 )
 
 var MainTemplate *template.Template
@@ -26,6 +27,11 @@ func main() {
 func hello(w http.ResponseWriter, r *http.Request) {
 	c := r.Context()
 	Work.Work(c)
+	var err error
+	MainTemplate, err = template.ParseFiles("html/main.html")
+	if (err!=nil) {
+		Log.Errorf(c, "%v", err)
+	}
 	MainTemplate.Execute(w, nil)
 }
 
