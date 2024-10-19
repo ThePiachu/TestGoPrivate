@@ -7,6 +7,8 @@ handlers:
   static_dir: static
 - url: /html
   static_dir: html
+- url: /app/html
+  static_dir: app/html
 - url: /res
   static_dir: res
 - url: /update

@@ -17,7 +17,7 @@ func init() {
 	//Admin functions
 	http.HandleFunc("/update", update)
 
-	MainTemplate, _ = template.ParseFiles("html/main.html")
+	MainTemplate, _ = template.ParseFiles("app/html/main.html")
 }
 
 func main() {
@@ -28,7 +28,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 	c := r.Context()
 	Work.Work(c)
 	var err error
-	MainTemplate, err = template.ParseFiles("html/main.html")
+	MainTemplate, err = template.ParseFiles("app/html/main.html")
 	if (err!=nil) {
 		Log.Errorf(c, "%v", err)
 	}
